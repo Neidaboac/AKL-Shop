@@ -1299,8 +1299,8 @@ i.product-item__like-icon-fill {
     position: absolute;
     right: 0;
     top: 0;
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     color: var(--white-color);
     background-color: rgba(255, 216, 64, 0.9);
     text-align: center;
@@ -1326,7 +1326,7 @@ i.product-item__like-icon-fill {
 .product-item__sale-off::before {
     content: "";
     position: absolute;
-    border-width: 0 18px 4px 18px;
+    border-width: 0 22px 4px 22px;
     border-style: solid;
     border-color: transparent rgba(255, 216, 64, 0.9) transparent rgba(255, 216, 64, 0.9);
     bottom: -4px;
