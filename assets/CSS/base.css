@@ -1,0 +1,243 @@
+:root {
+    --primary-color: #4daf54;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --background-color: linear-gradient(45deg, #4daf54, #3d8880);
+    --star-gold-color: #ffce3e;
+
+    --navbar-height: 32px;
+    --header-height: 148px;
+    --secondnavbar-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        transform: scale(var(--growth-from));
+    }
+    to {
+        opacity: 1;
+        transform: scale(var(--growth-to));
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+    display: none;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body {
+    --growth-from: 0.5;
+    --growth-to: 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+/* button style */
+.btn {
+    padding: 0 12px;
+    min-width: 80px;
+    height: 36px;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    line-height: 36px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    background-color: var(--white-color);
+}
+
+.btn.btn-normal:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.btn.btn--primary {
+    background: var(--background-color);
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.btn.btn--disable {
+    cursor: default;
+    background-color: #c3c3c3;
+    color: #949494;
+}
+
+/* selection */
+.select-input {
+    height: 36px;
+    padding: 0 12px;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__lable {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    position: relative;
+}
+
+.select-input__list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 76%;
+    list-style: none;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    display: none;
+    z-index: 1;
+}
+
+.select-input__link {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* just for fun  */
+.modal__gif {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: fadeIn linear 0.1s;
+    display: none;
+}
+
+.modal__gif.open {
+    display: flex;
+}
+
+.modal__gif-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__gif-body {
+    --growth-from: 0.5;
+    --growth-to: 1;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    animation: growth linear 0.1s;
+}
+
+.modal__gif-img {
+    width: 300px;
+    height: 300px;
+    background-color: var(--white-color);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 400px auto;
+}
+
+.modal__gif-img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active:hover .pagination-item__link {
+    background-color: var(--primary-color);
+    opacity: 0.9;
+}
+
+.pagination-item__link:hover {
+    background-color: rgba(153, 153, 153, 0.2)
+}
+
+.pagination-item__link {
+    --height: 40px;
+    display: block;
+    min-width: 40px;
+    height: var(--height);
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 4px;
+}
+
+
