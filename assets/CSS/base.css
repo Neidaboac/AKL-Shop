@@ -81,18 +81,34 @@ html {
     padding: 0 12px;
     min-width: 80px;
     height: 36px;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 2px;
     font-size: 1.4rem;
     line-height: 36px;
     outline: none;
+    text-decoration: none;
     cursor: pointer;
-    color: var(--text-color);
     display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-white {
+    color: var(--text-color);
     background-color: var(--white-color);
 }
 
-.btn.btn-normal:hover {
+.btn.btn-small {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+.btn.btn-normal {
+    width: 32%;
+}
+
+.btn.btn-white:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 

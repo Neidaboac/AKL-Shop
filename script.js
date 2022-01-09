@@ -42,11 +42,13 @@ var modalBoxes = document.querySelectorAll('.js-modal-box')
 function openModalRegister() {
     modal.classList.add('open')
     modalRegister.classList.add('open')
+    modalLogin.classList.remove('open')
 }
 
 function openModalLogin() {
     modal.classList.add('open')
     modalLogin.classList.add('open')
+    modalRegister.classList.remove('open')
 }
 
 
